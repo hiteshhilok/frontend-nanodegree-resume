@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-
+<?php  $base_url= "http://localhost/resumeBuilder/";?>
 <!--
 This is an HTML document. It contains information about how elements in the website
 are arranged. In other words, it describes the layout of a website.
@@ -24,7 +24,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
     
   <!-- Load the page styles. -->
-  <link href="http://localhost/resumeBuilder/css/style.css" rel="stylesheet">
+  <link href="<?php echo $base_url; ?>css/style.css" rel="stylesheet">
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -42,10 +42,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
  
-  <script src="http://localhost/resumeBuilder/js/jQuery.js"></script>
+  <script src="<?php echo $base_url; ?>js/jQuery.js"></script>
   <!-- More on helper.js in the class -->
-  <script src="http://localhost/resumeBuilder/js/helper.js"></script>
-  <script src="http://localhost/resumeBuilder/js/jsonData.js"></script>
+  <script src="<?php echo $base_url; ?>js/helper.js"></script>
+  <script src="<?php echo $base_url; ?>js/jsonData.js"></script>
     
   
   <!--
