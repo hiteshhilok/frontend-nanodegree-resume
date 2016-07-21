@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<?php  $base_url= "http://localhost/resumeBuilder/";?>
+<?php  $base_url= "http://localhost/frontend-nanodegree-resume/";?>
 <!--
 This is an HTML document. It contains information about how elements in the website
 are arranged. In other words, it describes the layout of a website.
@@ -24,7 +24,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
     
   <!-- Load the page styles. -->
-  <link href="<?php echo $base_url; ?>css/style.css" rel="stylesheet">
+  <link href="<?php echo $base_url;?>css/style.css" rel="stylesheet">
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -40,12 +40,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   you can't accomplish with vanilla (regular) JavaScript.
   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
  
-  <script src="<?php echo $base_url; ?>js/jQuery.js"></script>
+  <script src="<?php echo $base_url;?>js/jQuery.js"></script>
   <!-- More on helper.js in the class -->
-  <script src="<?php echo $base_url; ?>js/helper.js"></script>
-  <script src="<?php echo $base_url; ?>js/jsonData.js"></script>
+  <script src="<?php echo $base_url;?>js/helper.js"></script>
+  <script src="<?php echo $base_url;?>js/jsonData.js"></script>
     
   
   <!--
@@ -67,6 +67,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     -->
     
     <div id="header" class="center-content clear-fix">
+      <h1></h1>
       <ul id="topContacts" class="flex-box flex-item"></ul>
     </div>
       
@@ -108,7 +109,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     /*
         an opening and closing set of slash asterisks for block comments.
     */
---><script src="http://localhost/resumeBuilder/js/resumeBuilder.js"></script>
+--><script src="<?php echo $base_url ;?>js/resumeBuilder.js"></script>
     <script>
     console.log('top',document.getElementsByClassName('flex-item').length);
     if(document.getElementsByClassName('flex-item').length === 0) {
