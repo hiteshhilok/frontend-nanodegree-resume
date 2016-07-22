@@ -25,6 +25,7 @@ var jdata= {
                  "dates":"11 december 2011",
                  "url": ""
                 },
+       
             "onlineCourses": {
                  "title": "Testing",
                  "school": "Github",
@@ -43,15 +44,35 @@ var jdata= {
                  "workStart":"1 march 2014" ,
                  "dates":"23 jan 2016",
                  "description":"At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it"
+             },
+          
+           "jobs2":
+             {
+                 "employer": "Oprator",
+                 "title":"Computer Oprator" ,
+                 "location":"Bombay",
+                 "workStart":"1 march 2014" ,
+                 "dates":"21 july 2016",
+                 "description":"At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it"
              }
+          
+            
           },
     
        "projects" : { 
-                  "projects":{
+                "projects":{
                   "title":"Resume porject",
                   "projectStart":"15 march 2011",
                   "dates":"21 july 2014",
-                  "description":"At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it read from the document. This is achieved using the data option in the initialisation object, passing in an array of data to be used (like all other DataTables handled data, this can be arrays or objects ",
+                  "description":"Project At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it read from the document. This is achieved using the data option in the initialisation object, passing in an array of data to be used (like all other DataTables handled data, this can be arrays or objects ",
+                  "images":""
+               },
+           
+               "projects1":{
+                  "title":"H2o porject",
+                  "projectStart":"17 march 2010",
+                  "dates":"28 April 2015",
+                  "description":"Project1 will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it read from the document. This is achieved using the data option in the initialisation object, passing in an array of data to be used (like all other DataTables handled data, this can be arrays or objects ",
                   "images":""
                }
         }

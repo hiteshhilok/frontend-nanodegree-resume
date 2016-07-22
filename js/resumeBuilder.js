@@ -50,7 +50,7 @@ var formattedEducation = HTMLschoolName.replace("%data%", jdata.education.school
 
 $(function(){
     
-var model = {
+  var model = {
     
   init: function() {
             
@@ -90,37 +90,59 @@ var resume = {
     
      getworkData : function (){
      var jdata1 = model.getAllData();
-      var formattedWorkExp = HTMLworkEmployer.replace("%data%", jdata1.work.jobs.employer);
-    formattedWorkExp+= HTMLworkTitle.replace("%data%", jdata1.work.jobs.title);
-    formattedWorkExp+= HTMLworkStart.replace("%data%", jdata1.work.jobs.workStart);
-    formattedWorkExp+= HTMLworkDates.replace("%data%", jdata1.work.jobs.dates);
-    formattedWorkExp+= HTMLworkLocation.replace("%data%", jdata1.work.jobs.location);
-    formattedWorkExp+= HTMLworkDescription.replace("%data%", jdata1.work.jobs.description);
-    return formattedWorkExp;
+     var tamp = jdata1.work;
+     var result ='';
+    for(var i in tamp){ 
+    var formattedWorkExp = HTMLworkEmployer.replace("%data%", jdata1.work[i].employer);
+    formattedWorkExp+= HTMLworkTitle.replace("%data%", jdata1.work[i].title);
+    formattedWorkExp+= HTMLworkStart.replace("%data%", jdata1.work[i].workStart);
+    formattedWorkExp+= HTMLworkDates.replace("%data%", jdata1.work[i].dates);
+    formattedWorkExp+= HTMLworkLocation.replace("%data%", jdata1.work[i].location);
+    formattedWorkExp+= HTMLworkDescription.replace("%data%", jdata1.work[i].description);
+        
+    result += formattedWorkExp;
+    }
+    return result;
     },
     
     getprojectData : function (){
     var jdata1 = model.getAllData();
-    var formattedProject = HTMLprojectStart.replace("%data%", jdata1.projects.projects.projectStart);
-    formattedProject+= HTMLprojectTitle.replace("%data%", jdata1.projects.projects.title);
-    formattedProject+= HTMLprojectDates.replace("%data%", jdata1.projects.projects.dates);
-    formattedProject+= HTMLprojectDescription.replace("%data%", jdata1.projects.projects.description);
-    formattedProject+= HTMLprojectImage.replace("%data%", jdata1.projects.projects.images);
-    return formattedProject;
+    var tamp = jdata1.projects;
+    var result ='';
+    for(var i in tamp){ 
+    var formattedProject = HTMLprojectStart.replace("%data%", jdata1.projects[i].projectStart);
+    formattedProject+= HTMLprojectTitle.replace("%data%", jdata1.projects[i].title);
+    formattedProject+= HTMLprojectDates.replace("%data%", jdata1.projects[i].dates);
+    formattedProject+= HTMLprojectDescription.replace("%data%", jdata1.projects[i].description);
+    formattedProject+= HTMLprojectImage.replace("%data%", jdata1.projects[i].images);
+    result+= formattedProject;
+     }
+     return result;
     },
     
     geteductionData : function (){
     var jdata1 = model.getAllData();
-    var formattedEducation = HTMLschoolName.replace("%data%", jdata1.education.schools.name);
-    formattedEducation+= HTMLschoolDegree.replace("%data%", jdata1.education.schools.degree);
-    formattedEducation+= HTMLschoolDates.replace("%data%", jdata1.education.schools.dates);
-    formattedEducation+= HTMLschoolLocation.replace("%data%", jdata1.education.schools.location);
-    formattedEducation+= HTMLschoolMajor.replace("%data%", jdata1.education.schools.majors);
-    formattedEducation+= HTMLonlineTitle.replace("%data%", jdata1.education.onlineCourses.title);
+    var tamp = jdata1.education;
+    var result ='';
+    var sec ='';
+    for(var i in tamp){
+      sec =  Object.keys(jdata1.education[i]);
+      //console.log(sec);
+           for(var j in sec){ 
+    //console.log(jdata1.education[i][sec[j]]);
+    var formattedEducation = HTMLschoolName.replace("%data%", jdata1.education[i][sec[j]]);
+        formattedEducation+= HTMLschoolDegree.replace("%data%", jdata1.education[i][sec[j]]);
+        formattedEducation+= HTMLschoolDates.replace("%data%", jdata1.education[i][sec[j]]);
+        formattedEducation+= HTMLschoolLocation.replace("%data%", jdata1.education[i][sec[j]]);
+        formattedEducation+= HTMLschoolMajor.replace("%data%", jdata1.education[i][sec[j]]);
+    /*formattedEducation+= HTMLonlineTitle.replace("%data%", jdata1.education.onlineCourses.title);
     formattedEducation+= HTMLonlineSchool.replace("%data%", jdata1.education.onlineCourses.school);
     formattedEducation+= HTMLonlineDates.replace("%data%", jdata1.education.onlineCourses.dates);
-    formattedEducation+= HTMLonlineURL.replace("%data%", jdata1.education.onlineCourses.url);
-    return formattedEducation
+    formattedEducation+= HTMLonlineURL.replace("%data%", jdata1.education.onlineCourses.url);*/
+    result+= formattedEducation;
+           }
+     }
+     return result;
     },
     
       init : function(){
