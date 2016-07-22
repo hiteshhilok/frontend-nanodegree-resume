@@ -53,7 +53,7 @@ var jdata= {
                  "location":"Bombay",
                  "workStart":"1 march 2014" ,
                  "dates":"21 july 2016",
-                 "description":"At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it"
+                 "description":"At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it t"
              }
           
             
